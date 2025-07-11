@@ -11,29 +11,35 @@
             height: 100vh;
             overflow: auto;
             position: relative;
-            background: url('/Frontend/bg1.jpg') no-repeat center center fixed;
+            background: url('/bg1.jpg') no-repeat center center fixed;
             background-size: cover;
         }
         .navbar {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         .navbar .logo {
-            height: 60px; /* Increased size for better visibility */
-            border-radius: 50%; /* Makes the logo circular */
-            overflow: hidden; /* Ensures the image fits within the circular boundary */
+            height: 70px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .navbar .logo:hover {
+            transform: scale(1.1);
         }
         .navbar .nav-links a {
-            color: #fff;
+            color: #e0e0e0;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 16px;
+            margin-left: 25px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
         .navbar .nav-links a:hover {
-            color: #27ae60;
+            color: #2ecc71;
         }
         .container {
             text-align: center;
@@ -124,8 +130,8 @@
     <div class="navbar">
         <img src="./logo1.jpg" alt="GreenCred Logo" class="logo">
         <div class="nav-links">
-            <a href="/home">Home</a>
-            <a href="/profile">Profile</a>
+            <a href="/home.html">Home</a>
+            <a href="/profile.hyml">Profile</a>
             <a href="/report-history">Report History</a>
             <a href="/shop.html">Cred Shop</a>
         </div>
