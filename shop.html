@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenCred Shop</title>
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+  <div class="shop-container">
+    <h1>GreenCred Shop</h1>
+    <div id="user-points">Your Credit Points: <span id="points">100</span></div>
+    <div class="products">
+      <div class="product-card">
+        <img src="./bag.jpg" alt="Eco-Friendly Tote Bag" class="product-image">
+        <h3>Eco-Friendly Tote Bag</h3>
+        <p>Price: 50 points</p>
+        <button onclick="buyProduct(1)">Buy</button>
+      </div>
+      <div class="product-card">
+        <img src="./note.jpg" alt="Recycled Notebook" class="product-image">
+        <h3>Recycled Notebook</h3>
+        <p>Price: 30 points</p>
+        <button onclick="buyProduct(2)">Buy</button>
+      </div>
+      <div class="product-card">
+        <img src="./bottle.jpg" alt="Reusable Water Bottle" class="product-image">
+        <h3>Reusable Water Bottle</h3>
+        <p>Price: 75 points</p>
+        <button onclick="buyProduct(3)">Buy</button>
+      </div>
+      <div class="product-card">
+        <img src="./brush.jpg" alt="Bamboo Toothbrush Set" class="product-image">
+        <h3>Bamboo Toothbrush Set</h3>
+        <p>Price: 20 points</p>
+        <button onclick="buyProduct(4)">Buy</button>
+      </div>
+      <div class="product-card">
+        <img src="./soap.jpg" alt="Organic Soap Bar" class="product-image">
+        <h3>Organic Soap Bar</h3>
+        <p>Price: 25 points</p>
+        <button onclick="buyProduct(5)">Buy</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function buyProduct(productId) {
+      alert(`Purchased product ID: ${productId}. Please implement backend logic!`);
+      // Placeholder: Replace with actual API call to /api/shop/buy
+    }
+  </script>
+</body>
+</html>
