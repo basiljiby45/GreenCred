@@ -8,7 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     color: #333;
-    background: url('/Frontend/bg1.jpg') no-repeat center center fixed;
+    background: url('bg1.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
