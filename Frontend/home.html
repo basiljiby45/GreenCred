@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="weight=device-width, initial-scale=1.0">
     <title>GreenCred - Home</title>
     <style>
         body {
@@ -115,6 +115,9 @@
             width: 100%;
             bottom: 0;
         }
+        .weight-input {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -136,10 +139,19 @@
         <div class="modal-content">
             <h2>Report Waste</h2>
             <label>
-                <input type="checkbox" id="wasteFilled" name="wasteFilled"> Waste Filled
+                <input type="checkbox" id="plasticWaste" name="plasticWaste" onclick="toggleWeight('plasticWeight', this.checked)"> Plastic Waste
             </label>
-            <br>
-            <label for="wasteAddress">Address of the Waste</label>
+            <div class="weight-input" id="plasticWeight">
+                <label for="plasticWeightInput">Weight (kg)</label>
+                <input type="text" id="plasticWeightInput" name="plasticWeightInput" placeholder="Enter weight">
+            </div>
+            <label>
+                <input type="checkbox" id="paperWaste" name="paperWaste" onclick="toggleWeight('paperWeight', this.checked)"> Paper Waste
+            </label>
+            <div class="weight-input" id="paperWeight">
+                <label for="paperWeightInput">Weight (kg)</label>
+                <input type="text" id="paperWeightInput" name="paperWeightInput" placeholder="Enter weight">
+            </div>
             <input type="text" id="wasteAddress" name="wasteAddress" placeholder="Enter address">
             <button onclick="document.getElementById('wasteModal').style.display='none'">Submit</button>
             <button onclick="document.getElementById('wasteModal').style.display='none'">Back</button>
@@ -148,5 +160,10 @@
     <div class="footer">
         © 2025 GreenCred. All rights reserved. | <a href="#" style="color: #2ecc71;">Privacy Policy</a> | <a href="#" style="color: #2ecc71;">Contact Us</a>
     </div>
+    <script>
+        function toggleWeight(weightId, isChecked) {
+            document.getElementById(weightId).style.display = isChecked ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
