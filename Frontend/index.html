@@ -13,7 +13,7 @@
       <h2>GreenCred</h2>
     </div>
     <nav>
-      <a href="/Frontend/login.html" class="login-button">Login</a>
+      <a href="/login.html" class="login-button">Login</a>
     </nav>
   </header>
 
@@ -22,7 +22,7 @@
       <h1>Welcome to GreenCred</h1>
       <p class="tagline">Turn Your Recycling into Rewards!</p>
       <p>GreenCred is a web-based platform that encourages users to recycle waste by awarding points for every submission. Track your contributions and redeem earned points for eco-friendly products or coupons from our rewards shop. Our system motivates eco-friendly habits through gamification and community leaderboards, making recycling rewarding, engaging, and accessible to everyone.</p>
-      <a href="/learn-more.html" class="cta-button">Learn More</a>
+      <a href="#details" class="cta-button">Learn More</a>
     </div>
   </section>
 
@@ -31,8 +31,45 @@
     Your browser does not support the video tag.
   </video>
 
+  <section id="details" class="details-section">
+    <div class="details-content">
+      <h2>About GreenCred</h2>
+      <div class="info-card">
+        <h3>Our Mission</h3>
+        <p>Launched in 2025, GreenCred combats environmental pollution by turning waste into rewards, empowering a sustainable future.</p>
+      </div>
+      <div class="info-card">
+        <h3>How It Works</h3>
+        <ul>
+          <li><strong>Sign Up:</strong> Join as a customer or volunteer.</li>
+          <li><strong>Submit Waste:</strong> Earn points for every kilogram recycled.</li>
+          <li><strong>Track Progress:</strong> Monitor contributions on your dashboard.</li>
+          <li><strong>Redeem Rewards:</strong> Shop for eco-friendly items like tote bags and water bottles.</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Gamification & Community</h3>
+        <p>Compete on leaderboards, earn badges, and support community projects like tree planting with a portion of your points.</p>
+      </div>
+      <div class="info-card">
+        <h3>Our Vision</h3>
+        <p>By 2030, GreenCred aims to make recycling a global habit, fostering a greener planet through accessible, rewarding participation.</p>
+      </div>
+      <a href="#top" class="back-to-top">Back to Top</a>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 GreenCred. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/contact.html">Contact Us</a></p>
   </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
